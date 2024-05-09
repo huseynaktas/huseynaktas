@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: Platane/snk@master
         id: snake-gif
         with:
@@ -19,6 +22,12 @@ jobs:
           svg_out_path: dist/github-contribution-grid-snake.svg
 
       - run: git status
+
+      - name: Set outputs
+        id: set-outputs
+        run: |
+          echo ::set-output name=gif_out_path::dist/github-contribution-grid-snake.gif
+          echo ::set-output name=svg_out_path::dist/github-contribution-grid-snake.svg
 
       - name: Push changes
         uses: ad-m/github-push-action@master
