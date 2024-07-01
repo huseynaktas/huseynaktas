@@ -17,4 +17,3 @@
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=huseynaktas&" alt="huseynaktas" /></p>
 
-![snake gif](https://github.com/huseynaktas/huseynaktas/blob/output/github-contribution-grid-snake.gif)
